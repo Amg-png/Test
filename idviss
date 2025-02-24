@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+func penix() {
+    fmt.Println("                   ___.        __ ")
+    fmt.Println("___  ______________\\_ |__     |__|")
+    fmt.Println("\\  \\/  /  _ \\___   /| __ \\    |  |")
+    fmt.Println(" >    <  <_> )    / | \\_\\ \\   |  |")
+    fmt.Println("/__/\\_ \\____/_____ \\|___  /\\__|  |")
+    fmt.Println("      \\/          \\/    \\/\\______|")
+}
+
+func Login(login string, password string) {
+    fmt.Printf("Login:%s\tAddress:%p\n", login, &login)
+    fmt.Printf("Password:%s\tAddress:%p\n", password, &password)
+}
+
+func data() {
+    var login string
+    var password string
+
+    fmt.Println("Login:")
+    fmt.Scanln(&login) // Using Scanln instead of Scanf
+
+    fmt.Println("Password:")
+    fmt.Scanln(&password) // Using Scanln to capture password input
+
+    Login(login, password)
+}
+
+func main() {
+    penix()
+    data()
+
+    // Add a pause here to keep the program open until Enter is pressed
+    fmt.Println("Press Enter to exit...")
+    fmt.Scanln() // This waits for user input before closing the program
+}
